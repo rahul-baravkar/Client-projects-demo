@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #fdf6ee;
+    color: #2c2016;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold-500 text-white px-8 py-3 rounded-full font-body font-medium tracking-wide
+           hover:bg-gold-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 inline-flex items-center gap-2;
+  }
+
+  .btn-outline {
+    @apply border-2 border-gold-500 text-gold-600 px-8 py-3 rounded-full font-body font-medium tracking-wide
+           hover:bg-gold-500 hover:text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
+           active:translate-y-0 inline-flex items-center gap-2;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl text-charcoal leading-tight;
+  }
+
+  .section-subtitle {
+    @apply font-accent text-lg text-gold-600 tracking-widest uppercase;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .gold-divider {
+    @apply w-16 h-0.5 bg-gold-400 mx-auto my-4;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf6ee;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4891a;
+  border-radius: 3px;
+}
+
+/* Shimmer text */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #d4891a 0%,
+    #f2d58a 25%,
+    #d4891a 50%,
+    #ebbf4e 75%,
+    #d4891a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Fade-in-up animation helper classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative border */
+.ornament-border {
+  border-image: linear-gradient(90deg, transparent, #d4891a, transparent) 1;
+}
+
+/* Hero gradient overlay */
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(44, 32, 22, 0.82) 0%,
+    rgba(212, 137, 26, 0.15) 60%,
+    rgba(44, 32, 22, 0.7) 100%
+  );
+}
+
+/* Floating WhatsApp button pulse */
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-pulse {
+  animation: pulse-green 2s infinite;
+}
+
+/* Gallery image zoom */
+.gallery-item img {
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
