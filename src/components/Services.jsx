@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
-
+import babyShowerImg from './image/Baby_shower.jpg';
 const services = [
   {
     title: 'Wedding Decoration',
@@ -37,7 +37,7 @@ const services = [
   {
     title: 'Baby Shower Events',
     emoji: '🍼',
-    image: 'https://images.unsplash.com/photo-1576181256399-834e3ef3f9b0?w=600&q=80',
+    image:  babyShowerImg,
     desc: 'Gentle, adorable baby shower setups with soft colors, balloon arrangements, and cute themed decorations for this precious milestone.',
     tags: ['Soft Themes', 'Gender Reveal', 'Photo Corner', 'Florals'],
     color: 'from-pink-100 to-pink-50',

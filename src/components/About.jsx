@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Heart, Palette, IndianRupee, Star } from 'lucide-react';
-
+import event from './image/event.png'
 const stats = [
   { value: '500+', label: 'Events Decorated' },
   { value: '8+', label: 'Years Experience' },
@@ -53,7 +53,7 @@ export default function About() {
           <div className="reveal relative">
             <div className="relative z-10">
               <img
-                src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=700&q=80"
+                src={event}
                 alt="Beautiful wedding decoration by Samrudhi Events"
                 className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]"
               />
